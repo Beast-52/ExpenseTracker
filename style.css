@@ -35,17 +35,18 @@ h2{
 }
 
 .money{
-    background-color: white;
-    box-shadow: var(--box-shadow);
+    
+    
+
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
-    border-radius: 5px;
-    color: black;
+    margin: 20px auto;
+    
+    border-bottom:1px solid rgba(0, 0, 0, 0.600) ;
 }
 .money > div:first-of-type {
-    border-right: 1px solid black;
+  border-right:1px solid rgba(0, 0, 0, 0.600) ;
   }
   .money div{
     text-align: center;
@@ -195,6 +196,21 @@ input{
 th.edhead{
   width: 25%;
   height: 150%;
+}
+.instruction{
+  background: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 2vmax;
+  padding: 20px;
+}
+.instruction p{
+  text-transform: capitalize;
+  padding: 2px;
+  width: 90%;
+  margin: auto;
+  font-size: 12px;
+  font-weight: bold;
 }
 tr:hover .edbtn{
   visibility: visible;

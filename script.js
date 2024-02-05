@@ -48,7 +48,7 @@ const updateTransaction = () => {
         <tr>
         <td>${title}</td>
         <td>${Amount}$</td>
-        <td>${isCredit ? 'credit':'debit'}</td>
+        <td>${isCredit ? 'Earning':'Expense'}</td>
         <td class="edbtn">
             <button onclick="handleDelete(${id})"  class="red">Delete</button>
             <button onclick="handleUpdate(${id})"   class="green">Edit</button>  
