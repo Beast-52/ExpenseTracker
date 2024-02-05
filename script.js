@@ -1,38 +1,35 @@
-const table = document.querySelector(".container");
+
+  let state = {
+    expense: 0,
+    earning: 0,
+    net: 0,
+    transactions: [],
+};
+
 const balance = document.querySelector(".balance h2");
 const credit = document.querySelector(".credit span");
 const debit = document.querySelector(".debit span");
 const tbody = document.querySelector("tbody");
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 let tid;
-let isUpdate = false
+let isUpdate = false;
 
-
-let state = {
-  expense: 0,
-  earning: 0,
-  net: 0,
-  transactions: [
-  ],
+const saveData = () => {
+    let string = JSON.stringify(state);
+    localStorage.setItem("newState", string);
 };
-const saveData = ()=>{
-  let string = JSON.stringify(state) 
-  localStorage.setItem("newState", string) 
 
-}
-const getData = ()=>{
-  let retString = localStorage.getItem("newState") 
-        let retArray = JSON.parse(retString) 
-        state = retArray
-       
-      }
-      getData()
-
-var clutter = ''
-
+const getData = () => {
+    let retString = localStorage.getItem("newState");
+    if (retString !== null) {
+        let retArray = JSON.parse(retString);
+        state = retArray;
+    }
+};
+getData();
 
 const updateTransaction = () => {
-   
+  
 
   state.earning = 0
   state.expense = 0  
@@ -41,7 +38,7 @@ const updateTransaction = () => {
  
   state.transactions.forEach((item) => {
     
-
+    
     let { title, Amount, isCredit,id  } = item;
     
     isCredit = isCredit === "credit" ? true : false;
@@ -62,7 +59,7 @@ const updateTransaction = () => {
     tbody.innerHTML += clutterBox;
     state.earning += isCredit ? Amount :0
     state.expense += !isCredit ? -Amount : 0
-   
+  
   });  
   
   let {net,earning,expense}= state
@@ -73,7 +70,7 @@ const updateTransaction = () => {
     debit.textContent = -expense  + '$'
     balance.textContent = net + '$'  
     saveData()
-
+  
 };
 
 
