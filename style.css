@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+:root{
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 1px 2px 
+}
+html,
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background: #121212;
+  color: white;
+  padding: 20px;
+  padding-bottom: 10vh;
+  
+}
+h1 {
+  font-size: 3vmax;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #4dc3fa;
+  font-weight: 100;
+}
+
+h2{
+    margin-top: 20px;
+    color: #fb667a;
+    font-size: 2.5vmax;
+}
+
+.money{
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: black;
+}
+.money > div:first-of-type {
+    border-right: 1px solid black;
+  }
+  .money div{
+    text-align: center;
+    padding: 0 1vmax ;
+  }
+
+.credit span{
+    color: green;
+}
+.debit span{
+    color: red;
+}
+.blue {
+  color: #185875;
+}
+.yellow {
+  color: #fff842;
+}
+
+.container th h1 {
+  font-weight: bold;
+  font-size: 1.5vmax;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 1.5vmax;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 ;
+  display: table;
+  padding: 0 0 1em 0;
+  z-index: 999;
+}
+
+.container td,
+.container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: #323c50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+  background-color: #2c3446;
+}
+
+.container th {
+  background-color: #1f2739;
+}
+
+.container td:first-child {
+  color: #fb667a;
+}
+
+.container tr:hover {
+  background-color: #464a52;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+
+
+main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spendingManager {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  padding: 0.5vmax;
+  width: 15vmax;
+}
+button {
+  padding: 0.5vmax;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  font-size: 1vmax;
+  width: 5vmax;
+  
+  color: white;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+
+.input{
+  display: flex;
+  gap: 5px;
+}
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  gap: 10px;
+  margin: auto;
+  margin-bottom: 2vmax;
+ 
+}
+.button{
+  height: 100%;
+  width: 100%;
+}
+
+td.edbtn{
+  display: flex;
+  gap: 1vmax;
+  align-items: center;
+  visibility: hidden;
+  width: 20%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+input{
+  background: white;
+}
+th.edhead{
+  width: 25%;
+  height: 150%;
+}
+tr:hover .edbtn{
+  visibility: visible;
+}
+.spendingManager{
+  margin-bottom: 2vmax;
+}
+tr form:nth-child(1){
+  width: 50%;
+  height: 100%;
+}
+tr form:nth-child(2){
+  width: 50%;
+  height: 100%;
+}
+
+@media(max-width:1080px){
+  td.edbtn{
+    visibility: visible;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vmax;
+    padding: 1vmax;
+    width: 20%;
+  }
+  th.edhead{
+    width: 20%;
+    
+  }
+ 
+  .button button{
+    padding: 1vmax 1.5vmax;
+  }
+  
+  th:nth-child(1){
+    width: 30%;
+  }
+  th.edhead h1{
+    font-size: 1.2vmax;
+  }
+  .edbtn button{
+    margin: auto ;
+    font-size: 0.8vmax;
+    padding: 0.5vw 0.5vw;
+
+  }
+  .container{
+    width: 90vw;
+  }
+}
